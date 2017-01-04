@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/ic_login_logo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_bg"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/self_loginId"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="17dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/et_id"
+                android:singleLine="true"
+                android:textColor="@color/input_white"
+                android:textColorHint="@color/input_hint"
+                android:textCursorDrawable="@drawable/shape_text_cursor_yellow"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/self_loginClear"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/clear_white"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/edit_bg"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/self_loginPass"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="17dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="@string/et_pass"
+                android:inputType="textPassword"
+                android:textColor="@color/input_white"
+                android:textColorHint="@color/input_hint"
+                android:textCursorDrawable="@drawable/shape_text_cursor_yellow"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/login_buttom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/self_login"
+            android:layout_width="match_parent"
+            android:layout_height="43.3dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/yellowbutton_bg"
+            android:text="@string/bt_login"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/self_loginForget"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="17dp"
+            android:clickable="true"
+            android:text="@string/tv_forget"
+            android:textColor="@color/forget_code"
+            android:textSize="12sp"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <LinearLayout android:id="@+id/setting"
+                      android:padding="20dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:layout_gravity="right">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu_manage"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting"
+                android:textColor="@color/font_black"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

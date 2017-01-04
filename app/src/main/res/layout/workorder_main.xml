@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/order_state_layout"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/order_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_black"
+                android:text="@string/state_all"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/order_state_im"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/pull_before"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.66dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#BFBFBF"
+            />
+
+        <LinearLayout
+            android:id="@+id/order_type_layout"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/order_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_black"
+                android:text="@string/type_all"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/order_type_im"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/pull_before"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:background="#BFBFBF"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#f1f1f1"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_index"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/divider_line">
+
+            <com.drugoogle.sellscrm.common.SwipeListView
+                android:id="@+id/list_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@null">
+
+            </com.drugoogle.sellscrm.common.SwipeListView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <RelativeLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/icon_no_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="20dp"
+                android:src="@drawable/empty_list"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_no_list"
+                android:layout_centerHorizontal="true"
+                android:text="@string/no_such_result"
+                android:textSize="16sp"
+            />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

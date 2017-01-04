@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CommonTitle">
+        <attr name="title_img" format="reference"/>
+        <attr name="title_text" format="string"/>
+        <attr name="left_img" format="reference"/>
+        <attr name="left_text" format="string"/>
+        <attr name="right_img_one" format="reference"/>
+        <attr name="right_img_two" format="reference"/>
+        <attr name="right_text" format="string"/>
+    </declare-styleable>
+
+
+    <string-array name="day_of_week">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+
+
+    <!-- 拜访周期类型 -->
+    <!--<string-array name="visit_period">-->
+        <!--<item>@string/only_one_time</item>&lt;!&ndash; 仅这次 &ndash;&gt;-->
+        <!--<item>@string/everyday</item>&lt;!&ndash; 每天 &ndash;&gt;-->
+        <!--<item>@string/every_week</item>&lt;!&ndash; 每周 &ndash;&gt;-->
+        <!--<item>@string/every_month</item>&lt;!&ndash; 每月 &ndash;&gt;-->
+        <!--<item>@string/fixed_time</item>&lt;!&ndash; 固定次数 &ndash;&gt;-->
+    <!--</string-array>-->
+
+
+    <!-- 拜访计划的类型，财务、物流、业务、其他（默认） -->
+    <!--<string-array name="visit_type">-->
+        <!--<item>@string/visit_type_finance</item>&lt;!&ndash; 财务 &ndash;&gt;-->
+        <!--<item>@string/visit_type_logistics</item>&lt;!&ndash; 物流 &ndash;&gt;-->
+        <!--<item>@string/visit_type_business</item>&lt;!&ndash; 业务 &ndash;&gt;-->
+        <!--<item>@string/visit_type_other</item>&lt;!&ndash; 其他 &ndash;&gt;-->
+    <!--</string-array>-->
+
+    <!-- 拜访方式的类型 （电话、见面（默认））-->
+    <!--<string-array name="visit_model">-->
+        <!--<item>@string/visit_by_meet</item>&lt;!&ndash; 见面 &ndash;&gt;-->
+        <!--<item>@string/visit_by_phone</item>&lt;!&ndash; 电话 &ndash;&gt;-->
+    <!--</string-array>-->
+
+
+
+    <!-- 记录、计划 -->
+    <string-array name="plan_record">
+        <item>计划</item>
+        <item>记录</item>
+    </string-array>
+
+    <!-- 系统误报 -->
+    <string-array name="misinformation">
+        <item>这不是客户门店地址</item>
+        <item>我没有要去拜访</item>
+        <item>其他原因</item>
+    </string-array>
+
+    <!-- 状态：未开始、进行中、已完成 -->
+    <!--<string-array name="plan_status">-->
+        <!--<item>@string/visit_status_nonstart</item>&lt;!&ndash; 未开始 &ndash;&gt;-->
+        <!--<item>@string/visit_status_underway</item>&lt;!&ndash; 进行中 &ndash;&gt;-->
+        <!--<item>@string/visit_status_finished</item>&lt;!&ndash; 已完成 &ndash;&gt;-->
+    <!--</string-array>-->
+    <!--<integer-array name="plan_status_color">-->
+        <!--<item>@color/dark_gray</item>-->
+        <!--<item>@color/font_green</item>-->
+        <!--<item>@color/font_yellow</item>-->
+    <!--</integer-array>-->
+
+
+
+
+
+
+    <!--工单类型-->
+    <string-array name="order_type">
+        <item>@string/type_all</item>
+        <item>@string/type_tousu</item>
+        <item>@string/type_jianju</item>
+        <item>@string/type_zixun</item>
+        <item>@string/type_baopi</item>
+        <item>@string/type_weihu</item>
+        <item>@string/type_dinghuo</item>
+    </string-array>
+    <!--工单状态-->
+    <string-array name="order_state">
+        <item>@string/state_all</item>
+        <item>@string/state_not</item>
+        <item>@string/state_wait</item>
+        <item>@string/state_resolving</item>
+        <item>@string/state_resolved</item>
+    </string-array>
+    <!--工单状态对应颜色-->
+    <array name="order_state_color">
+        <item>@color/orderNotResolve</item>
+        <item>@color/orderWait</item>
+        <item>@color/orderResolving</item>
+        <item>@color/orderResolved</item>
+        <item>@color/orderAll</item>
+    </array>
+    <string-array name="customer_selectType">
+        <item>名称首字母</item>
+        <item>级别</item>
+        <item>离我最近</item>
+        <item>最近拜访记录</item>
+        <item>拜访次数</item>
+    </string-array>
+    <string-array name="customer_level">
+        <item>所有级别</item>
+        <item>非常重要</item>
+        <item>重要</item>
+        <item>普通</item>
+    </string-array>
+
+
+
+</resources>

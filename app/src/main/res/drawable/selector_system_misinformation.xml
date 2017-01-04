@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--系统误报页面复选框按钮-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_checked="true"
+        android:drawable="@drawable/icon_status_finished" />
+
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/icon_status_finished"/>
+
+    <item
+        android:drawable="@drawable/icon_status_nonstart" />
+
+</selector>

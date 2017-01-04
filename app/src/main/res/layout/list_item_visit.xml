@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="108dp"
+    android:minHeight="108dp"
+    android:background="@color/dialog_color">
+
+    <View
+        android:id="@+id/system_plan_flag_icon_iv"
+        android:layout_width="15px"
+        android:layout_height="wrap_content"
+        android:background="@color/font_yellow"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="2px"
+            android:layout_height="wrap_content"
+            android:layerType="software"
+            android:background="@drawable/shape_vertical_dash_line_blue"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_time_line"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"/>
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="2px"
+            android:layout_height="wrap_content"
+            android:layerType="software"
+            android:background="@drawable/shape_vertical_dash_line_blue"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp">
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textColor="@color/orderResolving"
+            android:text="12:00"/>
+
+        <!-- 名字-->
+        <LinearLayout
+            android:id="@+id/name_level_layout"
+            android:layout_below="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/important_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_important_level_middle"
+                    android:layout_alignBottom="@+id/name"/>
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="210dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="百姓大药房百姓大药房"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_black"
+                    android:layout_marginLeft="3dp"
+                    android:layout_alignParentTop="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="14dp">
+
+
+                <ImageView
+                    android:id="@+id/visit_type_icon_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/type_finance"
+                    android:layout_marginLeft="3dp"
+                    />
+                <TextView
+                    android:id="@+id/visit_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="业务"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray"/>
+
+                <ImageView
+                    android:id="@+id/visit_model_icon_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:src="@drawable/icon_visit_model_phone"/>
+                <TextView
+                    android:id="@+id/visit_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="电话约谈"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray"/>
+                </LinearLayout>
+        </LinearLayout>
+
+        <!-- 箭头-->
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blue_arrow_right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"/>
+
+        <!-- 状态 -->
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="14dp"
+            android:text="未开始"
+            android:textSize="12sp"
+            android:layout_toLeftOf="@+id/arrow"/>
+
+        <View
+            android:id="@+id/divider_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

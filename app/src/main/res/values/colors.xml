@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00A6B0</color>
+    <color name="colorPrimaryDark">#00747B</color>
+    <color name="colorAccent">#f9ab2c</color>
+    <color name="title_white">#ffffff</color><!--activity标题的颜色 -->
+
+
+    <color name="activity_background">#F3F3EE</color><!--activity底色 -->
+    <color name="content_background">#FFFFFA</color><!--内容底色 -->
+    <color name="font_black">#323232</color><!--字体黑色 -->
+    <color name="font_gray">#646464</color><!--字体灰色 -->
+    <color name="font_gray_2">#3b3b3b</color><!--字体灰色2 -->
+    <color name="divider_line_gray">#bfbfbf</color><!-- -->
+    <color name="font_white">#ffffff</color><!--字体灰色 -->
+    <color name="text_cursor_blue">#00a6b0</color><!--输入框光标蓝色 -->
+    <color name="divider_gray">#C0C0C0</color><!--细细的分割线的灰色 -->
+    <color name="font_yellow">#f9ab2c</color><!--常用字体黄色 -->
+    <color name="font_green">#04c204</color><!--常用字体绿色 -->
+    <color name="dark_gray">#909090</color><!--常用字体灰色 -->
+    <color name="light_blue">#cdedec</color><!--弹出下拉列表选中颜色 -->
+    <color name="font_gray_3">#8a8a8a</color><!--信用记录详情字体颜色 -->
+
+    <color name="status_unstart">#F9AB2C</color>
+    <color name="status_underway">#04C204</color>
+    <color name="status_finished">#8A8A8A</color>
+    <color name="no_more_gray">#C6C6C6</color>
+
+
+    <color name="calendar_gray">#F3F3EE</color>
+    <color name="calendar_line">#E5E5E5</color>
+    <color name="white">#FBFBFB</color>
+    <color name="lightGray">#C0C0C0</color>
+    <color name="darkGray">#797979</color>
+    <color name="yellowButtonClick">#D58604</color>
+    <color name="yellowButton">#323232</color>
+
+    <color name="orderNotResolve">#F75555</color>
+    <color name="orderWait">#F9AB2C</color>
+    <color name="orderResolving">#00A6B0</color>
+    <color name="orderResolved">#005C61</color>
+    <color name="orderAll">#646464</color>
+    <color name="divider_color">#BFBFBF</color>
+    <color name="dialog_color_click">#8200A6B0</color>
+    <color name="dialog_color">#FFFFFA</color>
+
+
+
+    <color name="dark_green">#036a49</color><!-- 首页common title 背景色 -->
+    <color name="blue">#00baec</color>
+    <color name="blue_highlight">#00a7d4</color>
+    <color name="hyperlink">#558ee3</color><!--链接蓝 -->
+    <color name="blue_text">#34aaf4</color>
+    <color name="title_text">#595959</color><!--common title 中间的text的颜色 -->
+    <color name="dialog_content">#323232</color><!-- 弹出dialog内容的字体颜色 -->
+    <color name="light_gray">#c8c8c8</color>
+    <color name="gray_line">#d9d9d9</color>
+    <color name="gray">#979797</color>
+    <color name="orange">#fdc500</color>
+    <color name="yellow">#fec601</color>
+    <color name="dark_yellow">#e4bc00</color>
+    <color name="eula_bg">#fcfcfc</color>
+    <color name="dark_red">#cf3636</color>
+    <color name="red">#c43333</color>
+    <color name="bg_gray">#f5f5f5</color>
+    <color name="middle_gray">#818181</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#231815</color>
+    <color name="main_yellow">#f6d300</color>
+    <color name="main_green">#2cc16e</color>
+    <color name="main_red">#e83e38</color>
+    <color name="main_orange">#f39743</color>
+    <color name="coupon_red">#ce3e35</color>
+    <color name="login_buttom">#f3f3ee</color>
+    <color name="forget_code">#949494</color>
+    <color name="input_white">#ffffff</color>
+    <color name="input_hint">#d9d9d9</color>
+    <color name="input_hint_address">#909090</color>
+    <color name="line_blue">#009a9a</color>
+    <color name="timer_yellow">#f9ab2c</color>
+    <color name="verify_hint">#646464</color>
+</resources>

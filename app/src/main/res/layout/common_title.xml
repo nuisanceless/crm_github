@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_title_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_title_height" >
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/app_name"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/title_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/left_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="14dp"
+        android:src="@android:drawable/ic_menu_revert"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="14dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:visibility="invisible"/>
+
+
+    <LinearLayout
+        android:id="@+id/right_img_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        >
+
+        <!-- 右侧功能按钮一 -->
+        <ImageView
+            android:id="@+id/right_img_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="14dp"
+            android:src="@android:drawable/ic_menu_add"
+            />
+
+
+        <!-- 右侧功能按钮二 -->
+        <ImageView
+            android:id="@+id/right_img_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="14dp"
+            android:src="@android:drawable/ic_menu_edit"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

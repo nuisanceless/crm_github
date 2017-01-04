@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/activity_background">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/add_visit_plan"
+                android:textColor="@color/title_white"
+                android:textSize="20sp"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <!-- 选择客户 -->
+            <RelativeLayout
+                android:id="@+id/select_client_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_common_height">
+
+
+                <TextView
+                    android:id="@+id/client_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_centerVertical="true"
+                    android:hint="@string/client_name"
+                    android:textColorHint="@color/font_gray"
+                    android:textSize="@dimen/common_font_size"
+                    android:textColor="@color/font_black"/>
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="17dp"
+                    android:src="@drawable/blue_arrow_right" />
+
+            </RelativeLayout>
+            <include layout="@layout/common_item_group_divider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 拜访周期 -->
+                <RelativeLayout
+                    android:id="@+id/visit_period_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_common_height">
+
+                    <TextView
+                        android:text="@string/visit_period_semi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="@dimen/common_font_size"
+                        android:textColor="@color/font_gray"/>
+
+                    <TextView
+                        android:id="@+id/visit_period_tv"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/common_font_size"
+                        android:textColor="@color/font_black"
+                        />
+
+                    <ImageView
+                        android:id="@+id/period_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/blue_arrow_bottom" />
+
+
+                </RelativeLayout>
+                <include layout="@layout/divider_line"/>
+
+                <RelativeLayout
+                    android:id="@+id/total_visit_count_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+
+                    <EditText
+                        android:id="@+id/total_visit_count_et"
+                        android:layout_width="166dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="100dp"
+                        android:hint="@string/hint_total_visit_count"
+                        android:textColorHint="@color/dark_gray"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/common_font_size"
+                        android:paddingLeft="3dp"
+                        android:background="@drawable/shape_edit_text_frame"
+                        android:inputType="number"
+                        android:textCursorDrawable="@drawable/shape_text_cursor_blue"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="8dp"
+                        android:background="@color/light_gray"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+
+
+                <!-- 选择日期 -->
+                <RelativeLayout
+                    android:id="@+id/date_time_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_common_height">
+
+                    <TextView
+                        android:text="@string/date_semi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/common_font_size"/>
+
+                    <TextView
+                        android:id="@+id/date_time_tv"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/common_font_size"/>
+
+                    <ImageView
+                        android:id="@+id/time_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/blue_arrow_bottom" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <include layout="@layout/common_item_group_divider"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 拜访类型 -->
+                <RelativeLayout
+                    android:id="@+id/visit_type_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_common_height">
+
+                    <TextView
+                        android:text="@string/type_semi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/common_font_size"/>
+
+                    <ImageView
+                        android:id="@+id/visit_type_icon_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="100dp"/>
+
+                    <TextView
+                        android:id="@+id/visit_type_tv"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/font_black"
+                        android:layout_toRightOf="@+id/visit_type_icon_iv"
+                        android:textSize="@dimen/common_font_size" />
+
+                    <ImageView
+                        android:id="@+id/type_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/blue_arrow_bottom" />
+
+                </RelativeLayout>
+                <include layout="@layout/divider_line"/>
+
+                <!-- 拜访方式 -->
+                <RelativeLayout
+                    android:id="@+id/visit_model_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_common_height">
+
+                    <TextView
+                        android:text="@string/model_semi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/common_font_size"/>
+
+                    <ImageView
+                        android:id="@+id/visit_model_icon_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="100dp"/>
+
+                    <TextView
+                        android:id="@+id/visit_model_tv"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/font_black"
+                        android:layout_toRightOf="@+id/visit_model_icon_iv"
+                        android:textSize="@dimen/common_font_size" />
+
+                    <ImageView
+                        android:id="@+id/model_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/blue_arrow_bottom" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <include layout="@layout/common_item_group_divider"/>
+
+
+            <!-- 备注 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/icon_add_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_add_remark"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"/>
+
+
+                <EditText
+                    android:id="@+id/remark_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/common_font_size"
+                    android:textColor="@color/font_black"
+                    android:hint="@string/hint_add_remark"
+                    android:textColorHint="@color/font_gray"
+                    android:maxLines="6"
+                    android:gravity="top|left"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:textCursorDrawable="@drawable/shape_text_cursor_blue"/>
+
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shade_bottom"/>
+
+
+            <Button
+                android:id="@+id/save_btn"
+                style="@style/common_btn"
+                android:text="@string/submit"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

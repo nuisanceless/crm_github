@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/content_background"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/phone_lay"
+            android:layout_width="match_parent"
+            android:layout_height="47dp">
+
+            <TextView
+                android:id="@+id/phone_text"
+                android:layout_width="64.7dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:text="电话："
+                android:textColor="@color/font_gray"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/phone_text"
+                android:layout_centerVertical="true"
+                android:text="12342354"
+                android:textColor="@color/font_gray"
+                android:textSize="12dp"/>
+
+            <ImageView
+                android:id="@+id/phoneIm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/icon_phone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/email_lay"
+            android:layout_width="match_parent"
+            android:layout_height="47dp">
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="64.7dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:text="邮箱："
+                android:textColor="@color/font_gray"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/email_text"
+                android:layout_centerVertical="true"
+                android:text="sdtfgsdfgds"
+                android:textColor="@color/font_gray"
+                android:textSize="12dp"/>
+
+            <ImageView
+                android:id="@+id/emailIm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/icon_email"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="#BFBFBF"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,371 @@
+<resources>
+    <string name="app_name">英特CRM</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="version_name">版本号V</string>
+
+    <!-- 登录 -->
+    <string name="et_id">
+        <front size="16">工号/手机号码</front>
+    </string>
+    <string name="et_pass">
+        <front size="16">请输入密码</front>
+    </string>
+    <string name="et_phone">
+        <front size="14">请输入手机号</front>
+    </string>
+    <string name="et_vcode">
+        <front size="14">请输入四位数的验证码</front>
+    </string>
+    <string name="et_pass_new">
+        <front size="14">输入新密码</front>
+    </string>
+    <string name="et_pass_con">
+        <front size="14">确认密码</front>
+    </string>
+    <string name="tv_forget">
+        <u>忘记密码?</u>
+    </string>
+    <string name="bt_login">登录</string>
+    <string name="bt_next">下一步</string>
+    <string name="bt_con_change">确认修改</string>
+    <string name="tv_vcode_request">获取验证码</string>
+    <string name="self_changePassTittle">修改密码</string>
+    <string name="loging">登录中...</string>
+    <string name="loading">加载中...</string>
+    <string name="idOrPassIsNull">账号或密码为空</string>
+    <string name="logined">登录成功</string>
+    <string name="network_err">网络不给力，请稍后再试。</string>
+    <string name="login_expired">登录过期，请重新登陆</string>
+    <string name="idOrPassErr">账号或密码错误，请重新输入。</string>
+    <string name="verify_code_err">输入的验证码错误,请重新输入。</string>
+    <string name="verify_send_to">验证码已发送至：</string>
+    <string name="phone_wrong">请输入正确的手机号</string>
+    <string name="phone_not_find">该手机号未绑定账号</string>
+    <string name="verify_length_err">请输入四位的验证码</string>
+    <string name="pass_not_equals">两次输入的密码不一致</string>
+    <string name="pass_changed">您的密码修改成功！</string>
+    <string name="pass_isNull">密码不能为空</string>
+    <string name="pass_format_err">密码只能是6-20位的字母数字和下划线</string>
+    <!--工单主页-->
+    <string name="order_scan_more">继续拖动加载更多</string>
+    <string name="state_not">未查看</string>
+    <string name="state_wait">待处理</string>
+    <string name="state_resolving">处理中</string>
+    <string name="state_resolved">已处理</string>
+    <string name="state_all">全部状态</string>
+    <string name="type_tousu">投诉</string>
+    <string name="type_jianju">检举</string>
+    <string name="type_zixun">咨询</string>
+    <string name="type_baopi">报批</string>
+    <string name="type_weihu">维护</string>
+    <string name="type_dinghuo">订货</string>
+    <string name="type_all">全部类型</string>
+    <string name="load_more">正在加载...</string>
+    <!-- 工单详细 -->
+    <string name="order_title">工单</string>
+    <string name="order_type">类型:</string>
+    <string name="order_id">工单号:</string>
+    <string name="order_publish_time">发布时间:</string>
+    <string name="order_customer">客户:</string>
+    <string name="order_contact_people">联系人:</string>
+    <string name="order_phone_number">电话:</string>
+    <string name="order_description">描述:</string>
+    <string name="order_finish">完成</string>
+    <string name="order_resolve">处理信息</string>
+    <string name="please_enter_sloveinfo">请输入处理信息</string>
+    <string name="mention">提示</string>
+    <string name="mention_content">请在处理结束后回到此页面填写处理信息</string>
+    <string name="known">我知道了</string>
+    <string name="please_enter_resolveinfo">请输入处理信息</string>
+    <string name="resolve_success">处理完成</string>
+    <string name="bt_iknow">我知道了，稍后处理</string>
+    <string name="bt_finish">完成</string>
+    <string name="no_such_result">没有符合条件的工单哦!</string>
+    <string name="no_work_order">无工单详情</string>
+
+
+    <!-- 自动拜访 -->
+    <string name="auto_visit_customer">自动拜访</string>
+    <string name="auto_visit_location_service">英特CRM自动拜访服务</string>
+    <string name="count_down_start_auto_plan">%1$d秒之后自动开始拜访</string>
+    <string name="please_select_visit_client">请选择要拜访的客户</string>
+    <string name="confirm_cancel_auto_visit">确认要取消本次自动拜访吗？</string>
+    <string name="auto_visit_location_service_working">英特CRM自动拜访服务已经启动</string>
+    <string name="location_ongoing">自动拜访服务运行中</string>
+    <string name="location_success">准备开始拜访</string>
+    <string name="location_success_start_visit">系统检测到您正在进行拜访</string>
+    <string name="visit_ongoing">正在拜访中</string>
+    <string name="visiting_noti_content_title">拜访进行中</string>
+    <string name="visiting_noti_content_text">您有一个正在拜访中的客户，点击查看</string>
+    <string name="visit_finish">拜访已结束</string>
+    <string name="visit_finish_when_leave_customer">检测到您的拜访已经结束，点击查看</string>
+    <string name="open_gps_for_auto_visit">请确保位置信息已经打开</string>
+    <string name="please_confirm_connected_network">请确保设备已经连接网络</string>
+    <string name="gps_permission_request">自动拜访功能可能无法正常工作</string>
+    <string name="please_check_network">自动拜访功能已停止</string>
+    <string name="begin_visit">开始拜访</string>
+    <!-- 拜访 -->
+    <string name="system_misinformation">系统误报</string>
+    <string name="reason">原因</string>
+    <string name="today_schedule">当日计划</string>
+    <string name="mine_workorder">我的工单</string>
+    <string name="no_plan_record">没有拜访计划哦!</string>
+    <string name="loading_plan_record">获取计划列表中。。。</string>
+
+    <string name="visit">拜访</string>
+    <string name="client">客户</string>
+    <string name="message">消息</string>
+    <string name="statics">统计</string>
+    <string name="workorder">工单</string>
+
+    <string name="search">搜索</string>
+    <string name="add_visit_plan">添加拜访计划</string>
+    <string name="edit_visit_plan">编辑拜访计划</string>
+    <string name="visit_plan">拜访计划</string>
+    <!--<string name="begin_date_semi">开始日期:</string>-->
+    <string name="client_name">客户名称(客户号)</string>
+    <string name="type_semi">类型:</string>
+    <string name="model_semi">方式:</string>
+    <string name="location_semi">位置:</string>
+    <string name="address_semi">地址:</string>
+    <string name="visit_period_semi">周期:</string>
+    <string name="visit_count">次数</string>
+    <string name="fixed_period">定期</string>
+
+    <string name="please_select_client">请选择客户</string>
+    <string name="please_enter_remark">请输入备注</string>
+    <string name="hint_add_remark">添加备注</string>
+    <string name="hint_record_remark">文字记录</string>
+    <string name="save">保存</string>
+    <string name="submit">提交</string>
+    <string name="save_visit_plan_success">添加拜访计划成功</string>
+    <string name="edit_visit_plan_success">编辑拜访计划成功</string>
+    <string name="save_visit_plan_fail">添加拜访计划失败</string>
+    <string name="edit_visit_record_fail">编辑拜访记录失败</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="add_temp_visit_record">添加临时拜访记录</string>
+    <string name="edit_temp_visit_record">编辑临时拜访记录</string>
+    <string name="visit_date_semi">拜访时间:</string>
+    <string name="visit_duration_semi">拜访时长:</string>
+    <string name="hour">小时</string>
+    <string name="minute">分钟</string>
+    <string name="visit_record">拜访记录</string>
+    <string name="visit_result">拜访结果</string>
+    <string name="camera">从相机拍照</string>
+    <string name="gallery">从相册选择</string>
+    <string name="add_and_save">添加并保存结果</string>
+    <string name="please_enter_visit_duration">请输入拜访时长</string>
+    <string name="please_enter_visit_record_remark">请输入拜访文字记录</string>
+    <string name="submitting_visit_plan">正在保存拜访计划</string>
+    <string name="submitting_visit_record">正在保存拜访纪录</string>
+    <string name="submitting_files">正在上传图片</string>
+    <string name="sunday">日</string>
+    <string name="monday">一</string>
+    <string name="tuesday">二</string>
+    <string name="wednesday">三</string>
+    <string name="thursday">四</string>
+    <string name="friday">五</string>
+    <string name="saturday">六</string>
+    <string name="confirm_to_delete_visit">确认要删除这个计划吗？</string>
+    <string name="deleteing">正在删除。。。</string>
+    <string name="hint_total_visit_count">请输入总共拜访次数</string>
+    <string name="duration_format">%1$02d小时%2$02d分钟</string>
+
+
+    <!-- 拜访计划详情页面 -->
+    <string name="plan_detail">计划详情</string>
+    <string name="plan_content_semi">计划内容:</string>
+    <string name="remark_semi">备注:</string>
+    <string name="finish_plan">完成计划</string>
+    <string name="loading_plan_detail">正在获取计划详情。。。</string>
+    <string name="delete_plan">正在删除计划详情。。。</string>
+    <string name="already_delete_plan">计划已删除</string>
+    <string name="start_plan">开始计划</string>
+    <string name="plan_started">计划已经开始</string>
+    <string name="plan_finished">计划已经完成</string>
+
+
+    <!-- 拜访记录详情页面-->
+    <string name="record_detail">记录详情</string>
+    <string name="loading_record_detail">正在获取记录详情。。。</string>
+    <string name="finish_visit">结束拜访</string>
+
+
+    <!-- 拜访搜索 -->
+    <string name="visit_search">拜访搜索</string>
+    <string name="select_client">请选择客户</string>
+    <string name="date_semi">日期:</string>
+    <string name="begin_date_semi">开始日期:</string>
+    <string name="end_date_semi">结束日期:</string>
+    <string name="visit_model_semi">拜访方式:</string>
+    <string name="visit_type_semi">拜访类型:</string>
+    <string name="clear">清空</string>
+    <string name="unlimited">不限</string>
+    <string name="no_visit_plan_find">没有找到拜访计划</string>
+
+
+    <!-- 客户列表 -->
+    <string name="mine_client">我的客户</string>
+
+    <!-- 侧边栏 -->
+    <string name="client_semi">客户:</string>
+    <string name="residue_visit_count_semi">本月剩余拜访:</string>
+
+    <string name="personal_information">个人信息</string>
+    <string name="mine_subordinate">我的下属</string>
+    <string name="setting">设置</string>
+    <!-- 拜访计划的状态 -->
+    <string name="visit_status_nonstart">未开始</string>
+    <string name="visit_status_underway">进行中</string>
+    <string name="visit_status_finished">已完成</string>
+    <!-- 拜访计划类型：财务/物流/业务/其他 -->
+    <string name="visit_type_finance">财务</string>
+    <string name="visit_type_logistics">物流</string>
+    <string name="visit_type_business">业务</string>
+    <string name="visit_type_other">其他</string>
+    <!-- 拜访周期类型-->
+    <string name="only_one_time">仅这次</string>
+    <string name="everyday">每天</string>
+    <string name="every_week">每周</string>
+    <string name="every_month">每月</string>
+    <string name="fixed_time">到期之前拜访次数</string>
+    <!-- 拜访方式的类型 -->
+    <string name="visit_by_phone">电话约谈</string>
+    <string name="visit_by_meet">见面约谈</string>
+
+    <string name="user_plan">自定义计划</string>
+    <string name="admin_plan">系统计划</string>
+
+
+    <!--个人信息-->
+    <string name="self_info_email">邮件:</string>
+    <string name="self_info_phone">电话:</string>
+    <!--设置-->
+    <string name="setting_check">未知停留区域检测</string>
+    <string name="setting_sync">拜访计划同步到系统日历</string>
+    <string name="setting_wifi">仅WIFI模式查看拜访结果多媒体信息</string>
+    <string name="setting_logout">退出登录</string>
+    <!--客户主页-->
+    <string name="sort_first_letter">名称首字母</string>
+    <string name="sort_level">级别</string>
+    <string name="sort_level_">级别:</string>
+    <string name="sort_nearest">离我最近</string>
+    <string name="sort_latest">最近拜访记录</string>
+    <string name="sort_times">拜访次数</string>
+    <string name="level_all">所有级别</string>
+    <string name="level_high">非常重要</string>
+    <string name="level_middle">重要</string>
+    <string name="level_low">普通</string>
+    <string name="search_hint">输入客户名称/客户号</string>
+    <string name="no_more">没有更多了</string>
+    <string name="refresh_finish">刷新完成</string>
+    <!--客户详情-->
+    <string name="customer_id">客户号:</string>
+    <string name="customer_name">客户名:</string>
+    <string name="customer_in_legal_">法人信息</string>
+    <string name="contact_people">联系人</string>
+    <string name="customer_address">客户地址</string>
+    <string name="sell_record">交易记录</string>
+    <string name="credit_record">信用记录</string>
+    <string name="call_tel">呼叫</string>
+    <string name="save_tel">保存到通讯录</string>
+    <string name="send_mail">发送邮件</string>
+    <string name="no_contact_people">无任何联系人信息</string>
+    <string name="no_age">无年龄信息</string>
+    <string name="no_phone">未添加电话信息</string>
+    <string name="no_email">未添加邮件信息</string>
+    <string name="no_search_result">没有符合条件的客户哦!</string>
+    <string name="address_choose">选择地址</string>
+    <string name="address_add">添加新地址</string>
+    <string name="level_changed">客户级别已修改</string>
+    <string name="no_customer">无客户信息</string>
+
+    <!--法人客户-->
+    <string name="name_short">客户简称:</string>
+    <string name="legal_person">法人:</string>
+    <string name="person_in_charge">企业负责人:</string>
+    <string name="contact_number">联系电话:</string>
+    <string name="company_type">公司类型:</string>
+    <string name="no_legal_person">无法人信息</string>
+
+    <string name="area">所在区域:</string>
+    <string name="sign_address">注册地址:</string>
+    <string name="tax_code">税号:</string>
+    <string name="license_number">营业执照注册号:</string>
+    <string name="organization_code">组织结构代码:</string>
+
+    <string name="operation_code">客户操作码:</string>
+    <string name="inspector">质检员:</string>
+    <string name="remarks">备注:</string>
+    <string name="check_update">检查更新</string>
+    <string name="confirm_del_address">是否删除这个地址</string>
+    <string name="modify">修改</string>
+    <string name="please_select_address">请选择地址</string>
+    <string name="add_addr_suc">添加地址成功</string>
+    <string name="set_addr_suc">修改地址成功</string>
+    <string name="gps_error">无法获取您的位置，请确认设置中的位置信息已经打开</string>
+    <string name="please_select_client_addr">请选择客户的拜访地址</string>
+    <string name="getting_location">正在获取您的位置</string>
+    <string name="msg_waiting">请稍后...</string>
+    <string name="empty_address">无地址信息</string>
+    <!--交易记录-->
+    <string name="sale">交易记录</string>
+    <string name="cus_name">客户姓名:</string>
+    <string name="customer_code">客户编码:</string>
+    <string name="status">状态:</string>
+    <string name="order_code">订单编号:</string>
+    <string name="create_time">创建时间:</string>
+    <string name="detail_count">细目笔数:</string>
+    <string name="total_money">总金额:</string>
+    <string name="input_member">录入员:</string>
+    <string name="deal_company">交易单位:</string>
+    <string name="no_upload">未装车</string>
+    <string name="uploading">装车中</string>
+    <string name="uploaded">已装车</string>
+    <string name="confirming">确认中</string>
+    <string name="confirmed">已确认</string>
+    <string name="apply_debit">申请扣款</string>
+    <string name="debit_success">扣款成功</string>
+    <string name="debit_fail">扣款失败</string>
+    <string name="empty_sale">无交易记录</string>
+    <string name="empty_deal">无明细记录</string>
+    <string name="no_sale_record">无交易详情</string>
+    <!--细目明细-->
+    <string name="detailed">细目明细</string>
+    <string name="goods_name">货品名称</string>
+    <string name="specifications">规格</string>
+    <string name="company">单位</string>
+    <string name="unit">单位</string>
+    <string name="number">数量</string>
+    <string name="unit_price">单价:</string>
+    <string name="sun_money">金额:</string>
+    <string name="remark_">备注:</string>
+    <!--信用记录list-->
+    <string name="total_amount">总额度:</string>
+    <string name="left_amount">剩余额度:</string>
+    <string name="pay_id">结算单ID:</string>
+    <string name="deliver_date">发货日期:</string>
+    <string name="pay_date">结算日期:</string>
+    <string name="not_back_money">未回金额:</string>
+    <string name="empty_credit_record">无信用记录</string>
+    <!--信用记录详情-->
+    <string name="invoice_code">发票号:</string>
+    <string name="no_tax_amount">无税金额:</string>
+    <string name="tax">税额:</string>
+    <string name="tax_amount">含税金额:</string>
+    <string name="back_amount">已回金额:</string>
+    <string name="credit_pay">结算总单</string>
+
+    <string name="confirm_to_delete">是否确认删除</string>
+    <string name="ignore_this_time">忽略此次</string>
+    <string name="upload_image_failed">上传图片失败</string>
+
+</resources>
+

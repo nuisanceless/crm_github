@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/month_text_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/edit_bottom">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/current_month_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="40sp"
+                android:text="3"
+                android:textColor="@color/font_yellow"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp">
+                <TextView
+                    android:id="@+id/current_year_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016年"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@+id/current_month_number_tv"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="月"
+                    android:textColor="@color/font_yellow"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@+id/current_month_number_tv"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/fold_calendar_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/fold_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/blue_arrow_bottom"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!-- 星期几标示 -->
+    <LinearLayout
+        android:id="@+id/week_sign_layout"
+        android:layout_below="@+id/month_text_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/calendar_gray"
+        >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <TextView
+                    style="@style/dateStyle"
+                    android:text="@string/sunday" />
+
+                <TextView
+                    style="@style/dateStyle"
+                    android:text="@string/monday" />
+                <TextView
+                    style="@style/dateStyle"
+                    android:text="@string/tuesday" />
+
+                <TextView
+                    style="@style/dateStyle"
+                    android:text="@string/wednesday" />
+
+                <TextView
+                    style="@style/dateStyle"
+                    android:text="@string/thursday" />
+
+                <TextView
+                    style="@style/dateStyle"
+                    android:text="@string/friday" />
+
+                <TextView
+                    style="@style/dateStyle"
+                    android:text="@string/saturday" />
+            </TableRow>
+        </TableLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_line_gray" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/week_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/week_sign_layout">
+
+        <!-- 周日历 -->
+        <LinearLayout
+            android:id="@+id/custom_week_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/custom_week_vp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+
+
+
+        <!-- 月日历 -->
+        <LinearLayout
+            android:id="@+id/custom_calendar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/custom_calendar_vp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white">
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/week_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:divider="@null"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/empty_layout"
+        android:visibility="gone"
+        android:layout_below="@+id/week_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/icon_no_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_list"
+            android:layout_centerInParent="true"
+            android:paddingBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_plan_record"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/icon_no_list"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
