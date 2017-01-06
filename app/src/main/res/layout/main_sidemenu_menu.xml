@@ -67,6 +67,24 @@
                     android:textColor="@color/font_black"
                     android:textSize="16sp"/>
             </LinearLayout>
+
+            <!--实验-->
+            <include layout="@layout/divider_line"/>
+            <LinearLayout android:id="@+id/experiment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="实验"
+                    android:textColor="@color/font_black"
+                    android:textSize="16sp"/>
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

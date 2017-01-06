@@ -27,7 +27,6 @@ import java.util.HashMap;
 
 /**
  * Created by wuguohao on 4/11/16.
- * 仿造番薯的自定义日历控件
  */
 public class CalendarView extends View
 {

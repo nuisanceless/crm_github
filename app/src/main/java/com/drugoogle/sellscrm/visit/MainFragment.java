@@ -41,6 +41,7 @@ import com.drugoogle.sellscrm.data.type.VisitModel;
 import com.drugoogle.sellscrm.data.type.VisitType;
 import com.drugoogle.sellscrm.rest.MyRestClient;
 import com.drugoogle.sellscrm.selfinfo.Account;
+import com.nineoldandroids.animation.ObjectAnimator;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
@@ -74,6 +75,8 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     protected MyRestClient mRestClient;
 
 
+    @ViewById(R.id.date_info_layout)
+    View mDateInfoLayout;
     @ViewById(R.id.date_info_tv)
     TextView mDateInfoTv;
     @ViewById(R.id.pre_date_iv)
@@ -93,6 +96,8 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     View mCalendarLayout;
     @ViewById(R.id.custom_calendar_vp)
     ViewPager mCustomCalendarVp;
+    @ViewById(R.id.rili_layout)
+    View mRiliLayout;
 
 
     @ViewById(R.id.list_view)
@@ -200,6 +205,8 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     }
 
 
+
+
     @AfterViews
     void init()
     {
@@ -209,6 +216,7 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         mLayoutInflater = getActivity().getLayoutInflater();
         mRestClient = mApp.restClient();
         mDataList = new ArrayList<>();
+        mDateInfoLayout.bringToFront();
 
 
         CalendarView[] cardViews = new CalendarView[3];
@@ -223,7 +231,7 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         mCustomCalendarVp.addOnPageChangeListener(calendarPageChangeListener);
         mCalendarAdapter.getItem(CONST_INITIAL_CURRENT_INDEX).setSelectDayIndex(mSelectDate);
 
-        foldCalendarCard();
+
         mPreDateIv.setOnClickListener(this);
         mNextDateIv.setOnClickListener(this);
         mShowCalendarIv.setOnClickListener(this);
@@ -568,8 +576,8 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
      */
     private void foldCalendarCard()
     {
-        mWeekSignLayout.setVisibility(View.GONE);
-        mCalendarLayout.setVisibility(View.GONE);
+
+        ObjectAnimator.ofFloat(mRiliLayout, "translationY", 0).start();
         mFoldCalendarFlag = true;
         refreshDateInfo(mSelectDate);
         mShowCalendarIv.setImageResource(R.drawable.icon_show_calendar);
@@ -580,8 +588,10 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
      */
     private void showCalendarCard()
     {
-        mWeekSignLayout.setVisibility(View.VISIBLE);
-        mCalendarLayout.setVisibility(View.VISIBLE);
+
+        int mWeekSignLayoutHeight = mWeekSignLayout.getHeight();
+        int mCalendarLayoutHeight = mCalendarLayout.getHeight();
+        ObjectAnimator.ofFloat(mRiliLayout, "translationY", mWeekSignLayoutHeight + mCalendarLayoutHeight).start();
         mFoldCalendarFlag = false;
         refreshMonthInfo(mSelectMonth);
         mShowCalendarIv.setImageResource(R.drawable.icon_fold_calendar);

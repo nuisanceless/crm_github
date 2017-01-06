@@ -302,6 +302,16 @@
             android:value="4330cddff4fcae25a0b47a29ad290cac" >
         </meta-data>
 
+        <!--实验-->
+        <activity android:name=".experiment.ExperimentActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".experiment.RiliExperimentActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
     </application>
 
 </manifest>

@@ -30,6 +30,7 @@ import com.drugoogle.sellscrm.Utils.CommonUtils;
 import com.drugoogle.sellscrm.data.response.BaseResponse;
 import com.drugoogle.sellscrm.data.response.NewWorkOrderCountResponse;
 import com.drugoogle.sellscrm.data.type.Gender;
+import com.drugoogle.sellscrm.experiment.ExperimentActivity;
 import com.drugoogle.sellscrm.selfinfo.Account;
 import com.drugoogle.sellscrm.selfinfo.Selfinfo_info_Activity_;
 import com.drugoogle.sellscrm.selfinfo.Selfinfo_setting_Activity_;
@@ -175,6 +176,12 @@ public class MainActivity extends AppCompatActivity
                 onSetting();
             }
         } );
+        headerView.findViewById(R.id.experiment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onExperiment();
+            }
+        });
         for (int i = 0; i < MODULES.length; i++) {
             TabLayout.Tab tab = tabBar.newTab();
             View v = LayoutInflater.from( MainActivity.this ).inflate( R.layout.main_tabitem, null );
@@ -352,6 +359,13 @@ public class MainActivity extends AppCompatActivity
         Selfinfo_setting_Activity_.intent( this ).start();
         DrawerLayout drawer = (DrawerLayout) findViewById( R.id.drawer_layout );
         drawer.closeDrawer( GravityCompat.START );
+    }
+
+    @Click(R.id.experiment)
+    void onExperiment() {
+        startActivity(new Intent(this, ExperimentActivity.class));
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
     }
 
     @Override
