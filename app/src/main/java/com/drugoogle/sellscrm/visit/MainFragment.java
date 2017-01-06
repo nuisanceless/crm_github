@@ -92,8 +92,6 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
     @ViewById(R.id.week_sign_layout)
     View mWeekSignLayout;
-    @ViewById(R.id.calendar_layout)
-    View mCalendarLayout;
     @ViewById(R.id.custom_calendar_vp)
     ViewPager mCustomCalendarVp;
     @ViewById(R.id.rili_layout)
@@ -590,8 +588,8 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     {
 
         int mWeekSignLayoutHeight = mWeekSignLayout.getHeight();
-        int mCalendarLayoutHeight = mCalendarLayout.getHeight();
-        ObjectAnimator.ofFloat(mRiliLayout, "translationY", mWeekSignLayoutHeight + mCalendarLayoutHeight).start();
+        int mCustomCalendarVpHeight = mCustomCalendarVp.getHeight();
+        ObjectAnimator.ofFloat(mRiliLayout, "translationY", mWeekSignLayoutHeight + mCustomCalendarVpHeight).start();
         mFoldCalendarFlag = false;
         refreshMonthInfo(mSelectMonth);
         mShowCalendarIv.setImageResource(R.drawable.icon_fold_calendar);
