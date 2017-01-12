@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--主内容区域-->
         <FrameLayout
             android:layout_below="@+id/zkzd_layout"
             android:layout_width="match_parent"
@@ -38,33 +39,42 @@
 
         </FrameLayout>
 
-        <LinearLayout
+        <!--滑动日历模块-->
+        <com.drugoogle.sellscrm.experiment.ExperimentCustomCalendar
             android:id="@+id/one_two_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/yellow"
+            android:layout_height="160dp"
+            android:layout_marginTop="-60dp"
             android:layout_alignBottom="@+id/zkzd_layout">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:text="1"/>
+        </com.drugoogle.sellscrm.experiment.ExperimentCustomCalendar>
+        <!--<LinearLayout-->
+            <!--android:id="@+id/one_two_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:background="@color/yellow"-->
+            <!--android:layout_marginTop="-60dp"-->
+            <!--android:layout_alignBottom="@+id/zkzd_layout">-->
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:text="2"/>
+            <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="80dp"-->
+                <!--android:text="1"/>-->
 
-        </LinearLayout>
+            <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="80dp"-->
+                <!--android:text="2"/>-->
 
+        <!--</LinearLayout>-->
+
+        <!--操作按钮模块-->
         <FrameLayout
             android:id="@+id/zkzd_layout"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@color/red"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:background="@color/red">
 
             <Button
                 android:id="@+id/zkzd_button"

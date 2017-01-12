@@ -27,6 +27,7 @@ import com.drugoogle.sellscrm.R;
 import com.drugoogle.sellscrm.Utils.CommonUtils;
 import com.drugoogle.sellscrm.Utils.DateUtils;
 import com.drugoogle.sellscrm.common.ActivityHelper_;
+import com.drugoogle.sellscrm.common.CustomCalendar;
 import com.drugoogle.sellscrm.common.MyApplication;
 import com.drugoogle.sellscrm.common.MyApplication_;
 import com.drugoogle.sellscrm.data.CalendarCellInfo;
@@ -90,12 +91,12 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     ImageView mShowTodayIv;
 
 
-    @ViewById(R.id.week_sign_layout)
+    //@ViewById(R.id.week_sign_layout)
     View mWeekSignLayout;
-    @ViewById(R.id.custom_calendar_vp)
+    //@ViewById(R.id.custom_calendar_vp)
     ViewPager mCustomCalendarVp;
     @ViewById(R.id.rili_layout)
-    View mRiliLayout;
+    CustomCalendar mRiliLayout;
 
 
     @ViewById(R.id.list_view)
@@ -215,6 +216,10 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         mRestClient = mApp.restClient();
         mDataList = new ArrayList<>();
         mDateInfoLayout.bringToFront();
+
+        mWeekSignLayout = mRiliLayout.findViewById(R.id.week_sign_layout);
+        mCustomCalendarVp = (ViewPager) mRiliLayout.findViewById(R.id.custom_calendar_vp);
+
 
 
         CalendarView[] cardViews = new CalendarView[3];
@@ -476,7 +481,7 @@ public class MainFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         @Override
         public void gestureUpglide()
         {
-            foldCalendarCard();
+            //foldCalendarCard();
         }
     };
 

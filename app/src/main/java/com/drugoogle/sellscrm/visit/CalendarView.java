@@ -1,5 +1,6 @@
 package com.drugoogle.sellscrm.visit;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 import com.drugoogle.sellscrm.R;
 import com.drugoogle.sellscrm.Utils.CommonUtils;
 import com.drugoogle.sellscrm.Utils.DateUtils;
+import com.nineoldandroids.view.ViewHelper;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -514,14 +516,21 @@ public class CalendarView extends View
 
     private float mDownX;
     private float mDownY;
+    private float disX;
+    private float disY;
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
+        Log.e("22222", "x=" + event.getX() + "  y=" + event.getY());
         switch (event.getAction())
         {
             case MotionEvent.ACTION_DOWN:
                 mDownX = event.getX();
                 mDownY = event.getY();
+                Log.e("ACTION_DOWN", "IN_DOWN_EVENT mDownX=" + mDownX + " mDownY=" + mDownY);
+                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.e("ACTION_MOVE", "IN_MOVE_EVENT mDownX=" + event.getX() + " mDownY=" + event.getY());
                 break;
             case MotionEvent.ACTION_UP:
                 float disX = event.getX() - mDownX;
@@ -535,8 +544,35 @@ public class CalendarView extends View
                     calendarViewListener.gestureUpglide();
                 }
                 break;
+            case MotionEvent.ACTION_CANCEL:
+                Log.e("ACTION_CANCEL", "IN_CANCEL_EVENT mDownX=" + event.getX() + " mDownY=" + event.getY());
+                break;
             default:
                 break;
+            /*case MotionEvent.ACTION_DOWN:
+                mDownX = event.getX();
+                mDownY = event.getY();
+                break;
+            case MotionEvent.ACTION_MOVE:
+                disX = event.getX() - mDownX;
+                disY = event.getY() - mDownY;
+
+                //int translationX = (int) (ViewHelper.getTranslationX(this) + disX);
+                int translationY = (int) (ViewHelper.getTranslationY(this) + disY);
+                //ViewHelper.setTranslationX(this,translationX);
+                ViewHelper.setTranslationY(this,translationY);
+
+                break;
+            case MotionEvent.ACTION_UP:
+                disX = event.getX() - mDownX;
+                disY = event.getY() - mDownY;
+                if (Math.abs(disX) < (touchSlop / 5) && Math.abs(disY) < (touchSlop / 5))
+                {
+                    selectDayAtPoint((int) event.getX(), (int) event.getY());
+                }
+                break;
+            default:
+                break;*/
         }
         return true;
     }
